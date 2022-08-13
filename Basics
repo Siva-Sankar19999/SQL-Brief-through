@@ -2,6 +2,8 @@
                                            
 Creating a table : CREATE TABLE table_name(name varchar(200),age int,marks int);
 
+WHERE clause is used to filter the rows which satisfies the condition . and *It applies on main table and study diff between where and Having (those are filters)
+
 CRUD OPerations are related to rows in tables
 CREATE : INSERT INTO table_name(name,age,marks) VALUES("Ravi",22,450);
 READ   : SELECT * FROM table_name;
