@@ -1,0 +1,25 @@
+                                           SQL
+                                           
+Creating a table : CREATE TABLE table_name(name varchar(200),age int,marks int);
+
+CRUD OPerations are related to rows in tables
+CREATE : INSERT INTO table_name(name,age,marks) VALUES("Ravi",22,450);
+READ   : SELECT * FROM table_name;
+UPDATE : UPDATE table_name SET name="Ravi Kumar";   ->It applies for all rows in the table. so, for a particular row we have to add WHERE clause to it.
+DELETE : DELETE FROM table_name; -> It applies for all the rows in the row. So , for particular row we have to add WHERE clause to it.
+
+
+Pagination concept
+Limit & offset 
+Limit specifies how many number of rows we want to take.
+offset specifies from where it starts
+
+For values comparison in columns we use =,<,<=, etc for numeric values and for *strings we use like operator
+
+wildcard characters -> %,_ 
+   % specifies zero or any number of characters   eg: name like "shirt%" -> for startswith shirt rest can be anything. 
+   _ single character of any type and that must be there
+
+ORDER BY colname1,colname2 for ascending or descending order
+
+
