@@ -1,14 +1,14 @@
                                            SQL
                                            
-1)Creating a table : CREATE TABLE table_name(name varchar(200),age int,marks int);
+1)Creating a table : CREATE TABLE table_name(name   VARCHAR(200) ,age INT ,marks INT);
 
 2)WHERE clause is used to filter the rows which satisfies the condition . and * It applies on main table and study diff between where and Having (those are filters for rows)
 
 3)CRUD OPerations are related to rows in tables
-      i)CREATE : INSERT INTO table_name(name,age,marks) VALUES("Ravi",22,450);
-      ii)READ   : SELECT * FROM table_name;
+      i)CREATE : INSERT INTO table_name(name,age,marks) VALUES ("Ravi",22,450);
+      ii)READ  : SELECT * FROM table_name;
       iii)UPDATE : UPDATE table_name SET name="Ravi Kumar";   -> It applies for all rows in the table. so, for a particular row we have to add WHERE clause to it.
-      iv)DELETE : DELETE FROM table_name; -> It applies for all the rows in the row. So , for a particular row we have to add WHERE clause to it.
+      iv)DELETE  : DELETE FROM table_name; -> It applies for all the rows in the row. So , for a particular row we have to add WHERE clause to it.
 
 
 4)Pagination concept
@@ -16,7 +16,7 @@
        Limit specifies how many number of rows we want to take.
        offset specifies from where it starts
 
-5)For values comparison in columns we use =,<,<=, etc for numeric values and for *strings we use like operator
+5)For values comparison in columns we use =,<,<=, etc for numeric values and for * strings we use like operator
 
 6)wildcard characters -> %,_ 
    i) % specifies zero or any number of characters   eg: name like "shirt%" -> for startswith shirt rest can be anything. 
@@ -26,7 +26,7 @@
 
 8) Alter clause is used to add, delete, or modify columns in an existing table
    i) add column : ALTER TABLE  table_name ADD  column_name datatype; -> [ ALTER TABLE player ADD jersey_num INT;]
-   ii)Rename column :ALTER TABLE table_name RENAME COLUMN c1 TO c2; -> [ ALTER TABLE player RENAME COLUMN jersey_num TO jersey_number; ] 
+   ii)Rename column : ALTER TABLE table_name RENAME COLUMN c1 TO c2; -> [ ALTER TABLE player RENAME COLUMN jersey_num TO jersey_number; ] 
    iii)Drop a column : ALTER TABLE table_name DROP COLUMN column_name; -> [ ALTER TABLE player DROP COLUMN jersey_number; ]
    
 9) IN and Between operator
@@ -58,63 +58,4 @@
     ii)Having is used to filter the rows on GROUP BY output
         
         eg: SELECT avg(marks) as avg_marks FROM class_table GROUP BY student_name HAVING avg_marks >50; 
-
-
-
-                                
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
