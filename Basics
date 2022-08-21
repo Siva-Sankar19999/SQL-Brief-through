@@ -1,27 +1,120 @@
                                            SQL
                                            
-Creating a table : CREATE TABLE table_name(name varchar(200),age int,marks int);
+1)Creating a table : CREATE TABLE table_name(name varchar(200),age int,marks int);
 
-WHERE clause is used to filter the rows which satisfies the condition . and *It applies on main table and study diff between where and Having (those are filters)
+2)WHERE clause is used to filter the rows which satisfies the condition . and * It applies on main table and study diff between where and Having (those are filters for rows)
 
-CRUD OPerations are related to rows in tables
-CREATE : INSERT INTO table_name(name,age,marks) VALUES("Ravi",22,450);
-READ   : SELECT * FROM table_name;
-UPDATE : UPDATE table_name SET name="Ravi Kumar";   ->It applies for all rows in the table. so, for a particular row we have to add WHERE clause to it.
-DELETE : DELETE FROM table_name; -> It applies for all the rows in the row. So , for particular row we have to add WHERE clause to it.
+3)CRUD OPerations are related to rows in tables
+      i)CREATE : INSERT INTO table_name(name,age,marks) VALUES("Ravi",22,450);
+      ii)READ   : SELECT * FROM table_name;
+      iii)UPDATE : UPDATE table_name SET name="Ravi Kumar";   -> It applies for all rows in the table. so, for a particular row we have to add WHERE clause to it.
+      iv)DELETE : DELETE FROM table_name; -> It applies for all the rows in the row. So , for a particular row we have to add WHERE clause to it.
 
 
-Pagination concept
-Limit & offset 
-Limit specifies how many number of rows we want to take.
-offset specifies from where it starts
+4)Pagination concept
+   i)Limit & offset 
+       Limit specifies how many number of rows we want to take.
+       offset specifies from where it starts
 
-For values comparison in columns we use =,<,<=, etc for numeric values and for *strings we use like operator
+5)For values comparison in columns we use =,<,<=, etc for numeric values and for *strings we use like operator
 
-wildcard characters -> %,_ 
-   % specifies zero or any number of characters   eg: name like "shirt%" -> for startswith shirt rest can be anything. 
-   _ single character of any type and that must be there
+6)wildcard characters -> %,_ 
+   i) % specifies zero or any number of characters   eg: name like "shirt%" -> for startswith shirt rest can be anything. 
+   ii)_ single character of any type and that must be there
 
-ORDER BY colname1,colname2 for ascending or descending order
+7)ORDER BY colname  for ascending or descending order and it applies finally on the query
+
+8) Alter clause is used to add, delete, or modify columns in an existing table
+   i) add column : ALTER TABLE  table_name ADD  column_name datatype; -> [ ALTER TABLE player ADD jersey_num INT;]
+   ii)Rename column :ALTER TABLE table_name RENAME COLUMN c1 TO c2; -> [ ALTER TABLE player RENAME COLUMN jersey_num TO jersey_number; ] 
+   iii)Drop a column : ALTER TABLE table_name DROP COLUMN column_name; -> [ ALTER TABLE player DROP COLUMN jersey_number; ]
+   
+9) IN and Between operator
+   i) In operator is used as replacement of multiple or conditions (but or condition should be checked on same column value only)
+           eg: SELECT * FROM product WHERE brand IN ( "Puma", "Levi's", "Mufti", "Lee", "Denim");
+           
+   ii) Between operator is used as replacement of multiple and condtions (but and condition should be checked on same column value only)        
+           eg: SELECT * FROM product WHERE price BETWEEN 1000 AND 5000;
+           
+10) Alias name -> as 
+
+11)Aggregation -> Combining multiple values in a column into a single value is called aggregation
+    eg: count,sum,min,max,avg etc
+  
+12) Group By and Having
+    i)Group by is used to divide the table into multiple groups (virtually) based on which have the same values for the mentioned attributes [ eg: group by name ]
+      and then we can perform aggregation operations on each group 
+      
+      eg: necessity condition : Query for average marks scored by one student in the class table
+                                i) select avg(marks) from class_table where student_name="Ravi";
+                              
+                                in above condition we want all students avg marks -> then we use group by and perform aggregation
+                                
+                                ii) select avg(marks) from class_table group by student_name;
+                                
+                                problem solved by group by :-)
+    
+    
+    ii)Having is used to filter the rows on GROUP BY output
+        
+        eg: SELECT avg(marks) as avg_marks FROM class_table GROUP BY student_name HAVING avg_marks >50; 
+
+
+
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
